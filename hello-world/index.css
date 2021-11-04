@@ -1,0 +1,14 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 300px;
+  border: 1px solid red;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
