@@ -21,5 +21,8 @@
     "js":[
       "js/index.js"
     ]
-  }]
+  }],
+  "background":{
+    "service_worker": "background.js"
+  }
 }

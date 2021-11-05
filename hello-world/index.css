@@ -1,14 +1,29 @@
-html {
-  padding: 0;
-  margin: 0;
-}
 
 body {
-  width: 300px;
-  border: 1px solid red;
-}
+  width: 350px;
+  margin: 0;
+  background-color: rgba(32, 33, 36, 1);
+  color: rgba(155, 160, 165, 1);
+} 
 
-button {
-  background-color: black;
-  color: white;
+.content-wrap{
+  position: relative;
+}
+.operate-area{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.text-input{
+  width: 60px;
+  background-color: rgba(32, 33, 36, 1);
+  color: rgba(155, 160, 165, 1);
+}
+input:focus{
+  color: rgba(155, 160, 165, 1);
+}
+.btnArea{
+  background-color: rgba(32, 33, 36, 1);
+  color: rgba(155, 160, 165, 1);
+  cursor: pointer;
 }
