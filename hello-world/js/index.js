@@ -48,13 +48,22 @@ locateEle.addEventListener('click', (e) => {
 
 btnEle.addEventListener('click', () => {
   console.log(currentSequence);
-  translate.innerText = "==========";
   writeIn(currentSequence + 1);
 });
 
 translate.addEventListener('click', () => {
   showRes(currentSequence);
-})
+});
+
+document.onkeydown = function(event){
+  console.log(event);
+  if(event.keyCode === 37){
+    writeIn(currentSequence - 1);
+  };
+  if(event.keyCode === 39){
+    writeIn(currentSequence + 1);
+  }
+};
 
 function showRes(order){
   const currrentkey = keys[order];
@@ -70,6 +79,7 @@ function writeIn(order){
   orderDisplay.innerText = order;
   wordEle.innerText = currentVal.headWord;
   // translate.innerText = currentVal.content.trans.map(item=>item.pos+item.tranCn+'').join('~');
+  translate.innerText = "==========";
   remember.innerText = currentVal.content.remMethod && currentVal.content.remMethod.val;
   example.innerText = currentVal.content.sentence && currentVal.content.sentence.length > 0 && currentVal.content.sentence[0].sContent;
   exampleTranslate.innerText = currentVal.content.sentence && currentVal.content.sentence.length > 0 && currentVal.content.sentence[0].sCn;
