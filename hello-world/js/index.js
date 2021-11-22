@@ -51,6 +51,16 @@ btnEle.addEventListener('click', () => {
   writeIn(currentSequence + 1);
 });
 
+translate.addEventListener('click', () => {
+  showRes(currentSequence);
+})
+
+function showRes(order){
+  const currrentkey = keys[order];
+  const currentVal = res[currrentkey] ? res[currrentkey] : notFindWord;
+  translate.innerText = currentVal.content.trans.map(item=>item.pos+item.tranCn+'').join('~');
+}
+
 function writeIn(order){
   currentSequence = order;
   const currrentkey = keys[order];
@@ -58,7 +68,7 @@ function writeIn(order){
   console.log(currentVal);
   orderDisplay.innerText = order;
   wordEle.innerText = currentVal.headWord;
-  translate.innerText = currentVal.content.trans.map(item=>item.pos+item.tranCn+'').join('~');
+  // translate.innerText = currentVal.content.trans.map(item=>item.pos+item.tranCn+'').join('~');
   remember.innerText = currentVal.content.remMethod && currentVal.content.remMethod.val;
   example.innerText = currentVal.content.sentence && currentVal.content.sentence.length > 0 && currentVal.content.sentence[0].sContent;
   exampleTranslate.innerText = currentVal.content.sentence && currentVal.content.sentence.length > 0 && currentVal.content.sentence[0].sCn;
