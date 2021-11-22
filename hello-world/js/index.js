@@ -48,6 +48,7 @@ locateEle.addEventListener('click', (e) => {
 
 btnEle.addEventListener('click', () => {
   console.log(currentSequence);
+  translate.innerText = "==========";
   writeIn(currentSequence + 1);
 });
 
