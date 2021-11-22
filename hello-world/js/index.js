@@ -62,7 +62,10 @@ document.onkeydown = function(event){
   };
   if(event.keyCode === 39){
     writeIn(currentSequence + 1);
-  }
+  };
+  if(event.keyCode === 16){
+    showRes(currentSequence);
+  };
 };
 
 function showRes(order){
